@@ -58,11 +58,17 @@ public class MainActivity extends AppCompatActivity {
 ```
 Yukarıdaki kod içerisinde bir veritabanı nasıl tanımlanır, nasıl oluşturulur, oluşturduğumuz tablo içerisine veri eklemenin nasıl olduğunu gördük.
 Şimdi eklediğimiz verilerden nereleri seçmek istediğimizi nasıl seçiyoruz görelim:
-```ruby
-Cursor cursor= database.rawQuery("SELECT * FROM Studens WHERE age>22", null);
-
-```
 Bu kodda yapmak istediğimiz öğrencilerin hepsini seç  where age>22 ancak yaşı 22 den büyük olanları göster. 
 ```ruby
+Cursor cursor= database.rawQuery("SELECT * FROM Studens WHERE age>22", null);
+```
 
+Eklediğimiz veriler içerisinde güncelleme silme işlemlerinin nasıl yapıldığına bir göz atalım:
+```ruby
+database.execSQL("UPDATE studens SET age=24 WHERE name='SUZAN'"); //GÜNCELLEME (kısaca kodu açıklarsak : ismi SUZAN olan öğrencinin yaşını 24 olarak değiştir.)
+database.execSQL("DELETE FROM studens WHERE name='SUZAN'"); //SİLME (kısaca: ismi SUZAN olan öğrenciyi bul ve onu veritabanından sil)
+```
+```ruby
+Örneğin çok fazla veriye sahipseniz ve kolay yoldan bir isme veya soyisime ulaşmak için (hatırlamıyor da olabilirsiniz) LIKE '%s'(sonu s ile biten) veya LIKE 'K%' (K ile başlayan) gibi ifadeler ile bulabilirsiniz.
+Cursor cursor= database.rawQuery("SELECT * FROM Studens WHERE name LIKE '%n'", null);
 ```
