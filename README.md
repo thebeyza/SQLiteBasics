@@ -4,7 +4,8 @@ SQLite, dünyada en çok dağıtılan ve tavsiye edilen kaynak kodları halka a�
 
 SQLite, onlarca programlama dili içerisinde rahatlıkla kullanılabilir. Bunlardan bazıları ASP, BASIC, C#, C, C++, Common Lisp, Curl, D, Delphi, Haskell, Java, Lua, newLisp, Objective-C, OCaml, Perl, PHP, Python, R, REBOL, Ruby, Scheme, Smaltalk, Tcl ve Visual Basic'tir.
 
-Android Studio ortamında yazılmış bir kod örneği bulunmaktadır:
+Android Studio ortamında yazılmış bir kod örneği bulunmaktadır.
+Hatta kod yazmak isterseniz https://sqliteonline.com/ sitesini ziyaret ederek istediğiniz çalışmayı yapabilirsiniz.
 ```ruby
 package com.beyzaakkuzu.sqlitelearning;
 
