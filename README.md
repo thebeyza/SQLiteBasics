@@ -56,3 +56,10 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+Yukarıdaki kod içerisinde bir veritabanı oluşturup içerisine veri eklemenin nasıl olduğunu gördük.
+Şimdi eklediğimiz verilerden nereleri seçmek istediğimizi nasıl seçiyoruz görelim:
+```ruby
+Cursor cursor= database.rawQuery("SELECT * FROM Studens WHERE age>22", null);
+
+```
+Bu kodda yapmak istediğimiz öğrencilerin hepsini seç  where age>22 ancak yaşı 22 den büyük olanları göster 
