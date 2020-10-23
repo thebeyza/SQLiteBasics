@@ -68,7 +68,8 @@ Eklediğimiz veriler içerisinde güncelleme silme işlemlerinin nasıl yapıld�
 database.execSQL("UPDATE studens SET age=24 WHERE name='SUZAN'"); //GÜNCELLEME (kısaca kodu açıklarsak : ismi SUZAN olan öğrencinin yaşını 24 olarak değiştir.)
 database.execSQL("DELETE FROM studens WHERE name='SUZAN'"); //SİLME (kısaca: ismi SUZAN olan öğrenciyi bul ve onu veritabanından sil)
 ```
-```ruby
+
 Örneğin çok fazla veriye sahipseniz ve kolay yoldan bir isme veya soyisime ulaşmak için (hatırlamıyor da olabilirsiniz) LIKE '%s'(sonu s ile biten) veya LIKE 'K%' (K ile başlayan) gibi ifadeler ile bulabilirsiniz.
+```ruby
 Cursor cursor= database.rawQuery("SELECT * FROM Studens WHERE name LIKE '%n'", null);
 ```
